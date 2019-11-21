@@ -1,19 +1,23 @@
 import React, {Component} from 'react';
 import './Post.scss';
+import TagList from "./TagList/TagList";
 
 class Post extends Component {
     render() {
         return (
             <div className="card">
-                <img className="card-img-top" src={this.props.image} />
-                <h4 className="card-title"><a href="#">{this.props.title}</a></h4>
+                <div className="header">
+                    <img className="icon user" src="/user.png" /><a href="#">{this.props.title}</a>
+                </div>
+                <div className="icons">
+                    <img className="card-img-top" src={this.props.image} />
+                    <img className="icon like" src="/like.png" alt=""/>
+                    <img className="icon comment" src="/comment.png" alt=""/>
+                    <img className="icon share" src="/share.png" alt=""/>
+                </div>
                 <div className="card-body">
-                    <ul>
-                        {this.props.tags.map(tag => {
-                            return <li className="btn btn-default btn-sm btn-rect text-regular font-accent">#{tag}</li>
-                        })}
-                    </ul>
-                    <h3><span className="fa fa-thumbs-o-up"></span> {this.props.likes}</h3>
+                    <p>{this.props.likes} likes</p>
+                    <TagList tags={this.props.tags}/>
                 </div>
             </div>
         );

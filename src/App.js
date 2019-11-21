@@ -17,7 +17,7 @@ class App extends Component {
         <Router>
             <div className="App">
               <Header/>
-              <main>
+              <main className="main">
                   <Switch>
                       <Route path="/profile">
                           <Profile />

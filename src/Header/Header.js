@@ -5,8 +5,11 @@ import './Header.scss';
 class Header extends Component {
     render () {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href="#">Instagram</a>
+            <nav className="navbar navbar-expand-lg navbar-light container">
+                <a className="navbar-brand" href="/">
+                    <img className="instagram-icon" src="/instagram-icon.png" alt=""/> |
+                    <img className="instagram-logo" src="/instagram-logo.png" alt=""/>
+                </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">

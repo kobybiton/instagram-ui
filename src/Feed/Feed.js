@@ -7,7 +7,8 @@ class Feed extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            posts: []
+            posts: [],
+            isLoading: true
         }
     }
 
@@ -17,14 +18,18 @@ class Feed extends Component {
             .then(posts => {
                 this.setState({posts: posts.slice(0, 10)});
             });
+        setTimeout(() => { this.setState({isLoading: false}); }, 3000);
+
     }
 
     render() {
         return (
             <div className="container">
-                {this.state.posts.map(post => {
-                    return <Post title={post.title} image={post.image} tags={post.tags} likes={post.likes}/>
-                })}
+                {this.state.isLoading ? <img className="loader" src="/loader.gif" alt=""/> :
+                    this.state.posts.map(post => {
+                        return <Post title={post.title} image={post.image} tags={post.tags} likes={post.likes}/>
+                    })
+                }
             </div>
         );
     }
