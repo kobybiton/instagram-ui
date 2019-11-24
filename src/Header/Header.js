@@ -1,32 +1,22 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import { Navbar, Nav } from "react-bootstrap";
 import './Header.scss';
 
 class Header extends Component {
     render () {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light container">
-                <a className="navbar-brand" href="/">
-                    <img className="instagram-icon" src="/instagram-icon.png" alt=""/> |
-                    <img className="instagram-logo" src="/instagram-logo.png" alt=""/>
-                </a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
-                            <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
-                        </li>
-                        <li className="nav-item active">
-                            <Link className="nav-link" to="/profile">Profile <span className="sr-only">(current)</span></Link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            <Navbar bg="light" expand="lg">
+                <Navbar.Brand href="#home">Instagram</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Link className="nav-link" to="/">Home</Link>
+                        <Link className="nav-link" to="/profile">Profile</Link>
+                        <Link className="nav-link" to="/post/create">Create Post</Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         );
     }
 }

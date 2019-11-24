@@ -3,6 +3,7 @@ import './App.scss';
 import Header from './Header/Header';
 import Feed from './Feed/Feed';
 import Profile from './Profile/Profile';
+import CreatePost from './CreatePost/CreatePost';
 
 import {
     BrowserRouter as Router,
@@ -21,6 +22,9 @@ class App extends Component {
                   <Switch>
                       <Route path="/profile">
                           <Profile />
+                      </Route>
+                      <Route path="/post/create">
+                          <CreatePost />
                       </Route>
                       <Route path="/">
                           <Feed />
