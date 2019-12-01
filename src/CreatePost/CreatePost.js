@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './CreatePost.scss';
 import { Form as BootstrapForm, Button } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import postModel from '../models/post.model';
 
@@ -20,7 +22,10 @@ class CreatePost extends Component {
                     <Form>
                         <BootstrapForm.Group controlId="formBasicEmail">
                             <BootstrapForm.Label>Image:</BootstrapForm.Label><br/>
-                            <Field type="file" name="image"/>
+                            <BootstrapForm.Label For="file-upload" className="custom-file-upload">
+                                <FontAwesomeIcon icon={faCloudUploadAlt} /> Upload Image
+                            </BootstrapForm.Label>
+                            <Field type="file" name="image" id="file-upload"/>
                             <ErrorMessage className="alert alert-danger form-control" name="image" component="div" />
                         </BootstrapForm.Group>
                         <BootstrapForm.Group controlId="formBasicPassword">

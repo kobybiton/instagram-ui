@@ -6,8 +6,13 @@ import './Header.scss';
 class Header extends Component {
     render () {
         return (
-            <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home">Instagram</Navbar.Brand>
+            <Navbar expand="lg">
+                <Navbar.Brand href="#home">
+                    <Link className="nav-link" to="/">
+                        <img className="instagram-icon" src="/instagram-icon.png" alt="Instagram Icon"/>
+                        <img className="instagram-logo" src="/instagram-logo.png" alt="Instagram Logo"/>
+                    </Link>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">

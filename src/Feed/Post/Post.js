@@ -7,7 +7,7 @@ class Post extends Component {
         return (
             <div className="card">
                 <div className="header">
-                    <img className="icon user" src="/user.png" /><a href="#">{this.props.title}</a>
+                    <img className="icon user" src="/user.png" alt="User"/><a href="/">{this.props.title}</a>
                 </div>
                 <div className="icons">
                     <img className="card-img-top" src={this.props.image} alt="card"/>
