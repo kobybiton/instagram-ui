@@ -10,10 +10,10 @@ class Post extends Component {
                     <img className="icon user" src="/user.png" /><a href="#">{this.props.title}</a>
                 </div>
                 <div className="icons">
-                    <img className="card-img-top" src={this.props.image} />
-                    <img className="icon like" src="/like.png" alt=""/>
-                    <img className="icon comment" src="/comment.png" alt=""/>
-                    <img className="icon share" src="/share.png" alt=""/>
+                    <img className="card-img-top" src={this.props.image} alt="card"/>
+                    <img className="icon like" src="/like.png" alt="like"/>
+                    <img className="icon comment" src="/comment.png" alt="comment"/>
+                    <img className="icon share" src="/share.png" alt="share"/>
                 </div>
                 <div className="card-body">
                     <p>{this.props.likes} likes</p>

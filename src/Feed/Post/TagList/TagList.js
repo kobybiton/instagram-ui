@@ -6,7 +6,7 @@ class TagList extends Component {
         return (
             <div className="tag-list">
                 {this.props.tags.map(tag => {
-                    return <a className="tag" href="#">#{tag}</a>
+                    return <a className="tag" href="/">#{tag}</a>
                 })}
             </div>
         );
